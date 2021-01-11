@@ -23,6 +23,8 @@ Manually:
 
 * docker logs -f <first few characters of container instance> (this lets us tail the logs for one of the container instances)
   
+* docker pull mysql (automatically pulls down latest image for mysql; does not run it)
+  
 * these docker commands are ran in the Docker Client and are sent to the Docker Daemon/Engine
 
 ![Docker Architecture](https://docs.docker.com/engine/images/architecture.svg)
