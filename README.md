@@ -35,8 +35,21 @@ Manually:
 * Ctrl + C to stop the running container
 * docker images
 * docker volume ls
+* docker container stop/kill <containerid> (stop gracefully stops while kill immediately shuts down the container)
 * docker system prune -a (To additionally remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command:)
 * docker container ls -all (show all containers with -all, exclude it to only show those running)
 * docker ps (show only running containers; use -a to show all containers)
+  
+  
+Dockerfile
+
+* FROM openjdk:8-jdk-alpine  // base image
+* EXPOSE 8080  // image will be created and run on port 8080 
+* ADD target/hello-world-rest-api.jar hello-world-rest-api.jar  // copy this jar into root folder with same image name
+* ENTRYPOINT ["sh", "-c", "java -jar /hello-world-rest-api.jar"]   // set the command that needs to be run at startup
+
+* docker build -t in28min/hello-world-rest-api:dockerfile1 . (build image from Dockerfile; docker build -t <repo>:<tag> .)
+
+* use Spotify **dockerfile-maven-plugin** to automate.  when you run mvn package it builds the jar and the docker image.  **jib** is another Maven plugin alternative you can use where you don't need Dockerfile
 
 * [Volumes](https://docs.docker.com/engine/reference/commandline/volume_ls/)
