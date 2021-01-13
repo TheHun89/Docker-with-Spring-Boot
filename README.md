@@ -29,7 +29,7 @@ Manually:
 
 ![Docker Architecture](https://docs.docker.com/engine/images/architecture.svg)
 
-* if updates are made to SB app then you just need to rerun - mvn package
+* if updates are made to SB app then you just need to rerun - mvn clean package -DskipTest
 * docker --version
 * docker-compose up/down
 * Ctrl + C to stop the running container
@@ -50,6 +50,12 @@ Dockerfile
 
 * docker build -t in28min/hello-world-rest-api:dockerfile1 . (build image from Dockerfile; docker build -t <repo>:<tag> .)
 
-* use Spotify **dockerfile-maven-plugin** to automate.  when you run mvn package it builds the jar and the docker image.  **jib** is another Maven plugin alternative you can use where you don't need Dockerfile
+* use Spotify **dockerfile-maven-plugin** to automate.  when you run mvn package it builds the jar and the docker image.  **jib** is another Maven plugin alternative you can use where you don't need Dockerfile and builds images in multiple layers
+
+* [Build and Publish Images with Dockerfile Maven Plugin](https://openliberty.io/blog/2018/09/12/build-and-push-spring-boot-docker-images.html)
 
 * [Volumes](https://docs.docker.com/engine/reference/commandline/volume_ls/)
+
+* when you restart a container the data will persist; however, if you delete the container and recreate it from the same image then the data is lost
+* use --volume=<custom database name> (this will create a folder in the container that will contain the data) ie: --volume mysql-database-volume:/var/lib/mysql
+* allows sharing volumes beetween containers
