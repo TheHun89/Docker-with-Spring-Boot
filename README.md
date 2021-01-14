@@ -52,6 +52,8 @@ Dockerfile
 
 * use Spotify **dockerfile-maven-plugin** to automate.  when you run mvn package it builds the jar and the docker image.  **jib** is another Maven plugin alternative you can use where you don't need Dockerfile and builds images in multiple layers
 
+* Networks - when other containers need to talk to each other then put them in the same network
+
 * [Build and Publish Images with Dockerfile Maven Plugin](https://openliberty.io/blog/2018/09/12/build-and-push-spring-boot-docker-images.html)
 
 * [Volumes](https://docs.docker.com/engine/reference/commandline/volume_ls/)
