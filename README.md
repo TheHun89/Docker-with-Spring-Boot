@@ -7,6 +7,10 @@
 * [Youtube - Create Docker Image with Spring Boot](https://www.youtube.com/watch?v=FlSup_eelYE)
 * [Publish Docker Images on Private Nexus Repository Using Jib Maven Plugin](https://dzone.com/articles/how-to-publish-docker-images-on-private-nexus-repo-1)
 
+* Advantages of Docker:  
+1. Adopt new tech faster with no worries about deployment issues
+2. Fewer environment issues - no more 'it worked for me locally'
+3. You can deploy image wherever you want to if it runs an app - consistent deployment automation across different environments and different technologies
 
 * Using Docker Desktop
 
@@ -53,6 +57,8 @@ Dockerfile
 * use Spotify **dockerfile-maven-plugin** to automate.  when you run mvn package it builds the jar and the docker image.  **jib** is another Maven plugin alternative you can use where you don't need Dockerfile and builds images in multiple layers
 
 * Networks - when other containers need to talk to each other then put them in the same network
+
+* Things to research in docker-compose: restart: always; environment: <var>:<value>
 
 * [Build and Publish Images with Dockerfile Maven Plugin](https://openliberty.io/blog/2018/09/12/build-and-push-spring-boot-docker-images.html)
 
