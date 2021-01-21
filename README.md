@@ -17,6 +17,7 @@
 * DockerHub Registry can contain multiple repositories where you can load images (and their versions/tags) for public use to pull down
 * image is a static template/set of bites that contains everything your app needs to run - all the classes, libraries and dependencies
 * images are ran in containers and you can have multiple containers running at once
+* Image is like a Class and Container is like an Object
 
 Manually:
 
