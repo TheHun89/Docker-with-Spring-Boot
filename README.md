@@ -44,6 +44,11 @@ Manually:
 * docker system prune -a (To additionally remove any stopped containers and all unused images (not just dangling images), add the -a flag to the command:)
 * docker container ls -all (show all containers with -all, exclude it to only show those running)
 * docker ps (show only running containers; use -a to show all containers)
+* docker logs
+* docker events - montior events happening with Docker Engine
+* docker top <container id> - show all processes running in specific container
+* docker stats - stats for each of the containers, cpu
+* docker system df - resources being managed by docker daemon
   
   
 Dockerfile
