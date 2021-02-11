@@ -8,6 +8,8 @@
 * [Youtube - Create Docker Image with Spring Boot](https://www.youtube.com/watch?v=FlSup_eelYE)
 * [Publish Docker Images on Private Nexus Repository Using Jib Maven Plugin](https://dzone.com/articles/how-to-publish-docker-images-on-private-nexus-repo-1)
 
+* [in28minutes - Docker Crash Course](https://github.com/in28minutes/docker-crash-course)
+
 * Advantages of Docker:  
 1. Adopt new tech faster with no worries about deployment issues
 2. Fewer environment issues - no more 'it worked for me locally'
